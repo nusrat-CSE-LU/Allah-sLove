@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>My Path to His Love</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+:root{--ink:#efe3c4;--mute:#8a92aa;--gold:#c9a24a;--gold2:#efe0b6;--card:#151b30;--line:rgba(201,162,74,.28);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px);background:#04060b}
+*{box-sizing:border-box}
+body{margin:0;min-height:100%;color:var(--ink);font:16px/1.45 Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:radial-gradient(120% 70% at 50% 0%,#0b1020 0%,#06080f 55%,#04060b 100%) fixed}
+#sky{position:fixed;inset:0;pointer-events:none;z-index:0}
+.star{position:absolute;border-radius:50%;background:#fff;animation:tw var(--d) ease-in-out infinite}
+@keyframes tw{50%{opacity:.12;transform:scale(.55)}}
+.wrap{position:relative;z-index:1;max-width:640px;margin:0 auto;padding:10px 14px 60px}
+header{text-align:center;padding-top:6px}
+.moon{width:74px;height:74px;margin:0 auto;filter:drop-shadow(0 0 14px rgba(251,227,154,.7));animation:float 6s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-5px)}}
+.bis{font-family:Amiri,"Traditional Arabic",serif;font-size:27px;color:var(--gold2);margin-top:2px}
+h1{font-family:'Cinzel Decorative',Georgia,serif;font-size:21px;margin:4px 0 2px;color:var(--gold);letter-spacing:.5px;text-shadow:0 0 18px rgba(232,185,74,.45)}
+.quote{margin:10px auto 0;max-width:460px;font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:21px;line-height:1.25;color:var(--ink);cursor:pointer}
+.quote small{display:block;font-family:system-ui,sans-serif;font-style:normal;font-size:11px;letter-spacing:1px;color:var(--mute);margin-top:4px;text-transform:uppercase}
+.nav{display:flex;align-items:center;justify-content:center;gap:14px;margin:16px 0 8px}
+.nav button{width:38px;height:38px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--gold);font-size:18px}
+.nav button:disabled{opacity:.3}
+.nav div{text-align:center;min-width:180px}
+.nav b{display:block;font-family:'Cinzel Decorative',Georgia,serif;font-size:14px}
+.nav small{color:var(--mute)}
+.card{position:relative;background:var(--card);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid var(--line);border-radius:20px;padding:16px 14px;margin:14px 0}
+.card h2{margin:0;font-family:'Cinzel Decorative',Georgia,serif;font-size:16px;color:var(--gold);text-align:center;letter-spacing:.5px}
+.ar{display:block;font-family:Amiri,serif;font-size:22px;color:var(--gold2);text-align:center;margin-top:2px}
+.sub{text-align:center;color:var(--mute);font-size:13px;margin:4px 0 8px}
+.orn{text-align:center;color:var(--gold);letter-spacing:8px;font-size:11px;opacity:.7;margin:2px 0 6px}
+.hero{display:flex;align-items:center;gap:14px}
+.ring{flex:none;width:112px;height:112px;position:relative}
+.ring svg{width:100%;height:100%;transform:rotate(-90deg);filter:drop-shadow(0 0 8px rgba(232,185,74,.5))}
+.ring .mid{position:absolute;inset:0;display:grid;place-items:center;text-align:center;line-height:1.1}
+.ring b{font-family:'Cinzel Decorative',serif;font-size:24px;color:var(--gold2)}
+.ring small{display:block;font-size:11px;color:var(--mute)}
+.heromsg{font-family:'Cormorant Garamond',Georgia,serif;font-size:21px;line-height:1.2}
+.item{display:flex;align-items:center;gap:12px;padding:11px 8px;margin:6px 0;border-radius:14px;background:rgba(255,255,255,.04);border:1px solid transparent;cursor:pointer;transition:.25s;-webkit-tap-highlight-color:transparent}
+.item:active{transform:scale(.98)}
+.ic{flex:none;font-size:24px;width:34px;text-align:center}
+.t{flex:1;font-weight:600}
+.t small{display:block;font-weight:400;color:var(--mute);font-size:12.5px;line-height:1.3;margin-top:1px}
+.box{flex:none;width:30px;height:30px;border-radius:50%;border:2px solid var(--gold);display:grid;place-items:center;color:#2a1b00;font-size:16px;transition:.25s}
+.item.done{background:linear-gradient(90deg,rgba(232,185,74,.22),rgba(232,185,74,.06));border-color:var(--line)}
+.item.done .box{background:radial-gradient(circle,var(--gold2),var(--gold));box-shadow:0 0 14px rgba(251,227,154,.8)}
+.magic{border-color:var(--gold);background:linear-gradient(165deg,#2a2413,#141b33);box-shadow:0 0 28px rgba(232,185,74,.28);animation:glow 4s ease-in-out infinite}
+@keyframes glow{50%{box-shadow:0 0 42px rgba(232,185,74,.5)}}
+.magic h2{font-size:20px;text-shadow:0 0 14px rgba(232,185,74,.7)}
+.magic .t{font-family:'Great Vibes','Brush Script MT',cursive;font-size:29px;line-height:1.05;color:var(--gold2);font-weight:400}
+.magic .t small{font-family:system-ui,sans-serif;font-size:12.5px;color:var(--mute)}
+.stars{text-align:center;font-size:22px;letter-spacing:5px;color:rgba(255,255,255,.22);margin:6px 0}
+.stars .on{color:var(--gold2);text-shadow:0 0 10px var(--gold)}
+.arrow{position:relative;overflow:hidden;margin:6px 0 10px;padding:12px;border-radius:14px;background:rgba(0,0,0,.25);border:1px dashed var(--line);text-align:center}
+.arrow p{margin:0;font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:20px;line-height:1.25;color:var(--gold2)}
+.arrow small{color:var(--mute);font-size:12px}
+.flight{position:absolute;top:2px;left:0;font-size:24px;color:var(--gold);opacity:.8;animation:shoot 5s linear infinite}
+@keyframes shoot{from{transform:translateX(-40px)}to{transform:translateX(640px)}}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;text-align:center;margin-top:10px}
+.stat{background:rgba(255,255,255,.05);border:1px solid var(--line);border-radius:14px;padding:10px 4px}
+.stat b{display:block;font-family:'Cinzel Decorative',serif;font-size:22px;color:var(--gold2)}
+.stat small{color:var(--mute);font-size:11.5px}
+.bar{height:10px;background:rgba(255,255,255,.1);border-radius:99px;overflow:hidden;margin:12px 0 4px}
+.bar i{display:block;height:100%;background:linear-gradient(90deg,#2fbf8f,var(--gold),var(--gold2));border-radius:99px;transition:width .4s}
+.grid{display:grid;grid-template-columns:repeat(10,1fr);gap:5px;margin-top:12px}
+.c{aspect-ratio:1;border-radius:50%;background:rgba(255,255,255,.07);display:grid;place-items:center;font-size:10px;color:var(--mute);border:0;padding:0}
+.c.full{background:radial-gradient(circle,var(--gold2),var(--gold));color:#2a1b00;font-weight:700;box-shadow:0 0 8px rgba(232,185,74,.7)}
+.c.part{background:rgba(232,185,74,.3);color:var(--ink)}
+.c.fut{opacity:.4}
+.c.ms{outline:1.5px dashed var(--gold);outline-offset:1px;font-weight:700;color:var(--gold2)}
+.c.ms.full{color:#2a1b00}
+.c.today{outline:2px solid #fff;outline-offset:1px}
+.c.sel{box-shadow:0 0 0 3px rgba(255,255,255,.5)}
+.legend{display:flex;gap:12px;flex-wrap:wrap;font-size:11px;color:var(--mute);margin-top:10px}
+.legend i{display:inline-block;width:11px;height:11px;border-radius:50%;vertical-align:-1px;margin-right:4px}
+.msn{text-align:center;font-family:'Cormorant Garamond',Georgia,serif;font-size:20px;color:var(--gold2);margin:12px 0 0;line-height:1.25}
+footer{text-align:center;margin-top:20px}
+.ghost{background:transparent;color:var(--mute);border:1px solid var(--line);border-radius:12px;padding:8px 12px;font-size:12px}
+.sp{position:fixed;z-index:50;pointer-events:none;color:var(--gold2);font-size:16px;text-shadow:0 0 8px var(--gold);animation:fly .95s ease-out forwards}
+@keyframes fly{to{transform:translate(var(--dx),var(--dy)) scale(.2) rotate(200deg);opacity:0}}
+#toast{position:fixed;left:50%;bottom:calc(26px + env(safe-area-inset-bottom,0px));transform:translate(-50%,30px);opacity:0;z-index:60;background:linear-gradient(90deg,var(--gold),var(--gold2));color:#2a1b00;font-weight:700;padding:10px 18px;border-radius:99px;box-shadow:0 6px 24px rgba(0,0,0,.4);transition:.3s;pointer-events:none;white-space:nowrap}
+#toast.show{opacity:1;transform:translate(-50%,0)}
+.scale{display:grid;grid-template-columns:repeat(20,1fr);gap:2px;margin-top:12px}
+.scale span{height:22px;border-radius:5px;display:grid;place-items:center;font-size:10px;font-weight:700}
+.jpbar{text-align:center;margin:10px 0}
+.jpb{border:1px solid rgba(255,107,129,.5);background:rgba(224,51,79,.12);color:#ffb3c0;border-radius:99px;padding:9px 16px;font-size:13px;font-weight:600}
+.jpb.on{background:linear-gradient(90deg,#c4122f,#ff6b81);color:#fff;box-shadow:0 0 16px rgba(224,51,79,.6)}
+.card.jp{border-color:#e0334f;background:linear-gradient(165deg,#3a1019,#141b33);box-shadow:0 0 28px rgba(224,51,79,.35)}
+.card.jp h2,.card.jp .ar{color:#ffb3c0}
+.card.jp .item.done{background:linear-gradient(90deg,rgba(224,51,79,.28),rgba(224,51,79,.06));border-color:rgba(224,51,79,.5)}
+.card.jp .box{border-color:#ff6b81}
+.card.jp .item.done .box{background:radial-gradient(circle,#ff9aab,#e0334f);box-shadow:0 0 14px rgba(255,107,129,.8);color:#fff}
+.c.jpfull{background:radial-gradient(circle,#ff6b81,#c4122f);color:#fff;font-weight:700;box-shadow:0 0 8px rgba(224,51,79,.8)}
+.c.jppart{background:rgba(224,51,79,.3);color:#fff}
+.shoot{position:absolute;width:110px;height:2px;border-radius:2px;background:linear-gradient(90deg,#fff,rgba(255,255,255,0));opacity:0;animation:shoot2 9s linear infinite}
+@keyframes shoot2{0%{transform:translate(0,0) rotate(-30deg);opacity:0}3%{opacity:1}14%{transform:translate(-340px,196px) rotate(-30deg);opacity:0}100%{opacity:0}}
+h1,.nav b,.card h2,.ring b,.stat b{font-family:'Playfair Display',Georgia,serif!important;letter-spacing:.3px}
+h1{font-size:25px;font-weight:700}
+.card h2{font-size:17px;font-weight:700}
+.magic h2{font-size:20px}
+.magic .t{font-family:'Playfair Display',Georgia,serif!important;font-size:19px;font-weight:600;line-height:1.25;color:var(--gold2)}
+.magic .t small{font-family:Inter,system-ui,sans-serif;font-size:12.5px;font-weight:400}
+body{font-family:'Cormorant Garamond',Georgia,serif;font-size:18px}
+h1{font-family:'Cormorant Garamond',Georgia,serif!important;font-weight:500;font-size:36px;line-height:1.1;color:var(--gold2);letter-spacing:0;text-shadow:none}
+.card h2,.magic h2{font-family:'Cormorant Garamond',Georgia,serif!important;font-size:14px;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);text-shadow:none}
+.nav b{font-family:'Cormorant Garamond',Georgia,serif!important;font-size:15px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+.ring b,.stat b{font-family:'JetBrains Mono',ui-monospace,monospace!important;font-weight:500;color:var(--gold2);letter-spacing:0}
+.ring b{font-size:22px}.stat b{font-size:20px}
+.sub{letter-spacing:.18em;text-transform:uppercase;font-size:11px;color:var(--gold)}
+.stat small,.legend,.ring small,.nav small{letter-spacing:.14em;text-transform:uppercase;font-size:10px;color:var(--mute)}
+.t{font-weight:600;font-size:20px;color:var(--ink)}
+.t small,.magic .t small{font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:15.5px;font-weight:500;letter-spacing:0;text-transform:none;color:var(--mute)}
+.magic .t{font-family:'Cormorant Garamond',Georgia,serif!important;font-size:22px;font-weight:600;color:var(--gold2)}
+.quote{font-size:24px;font-weight:500}
+.jpb,.ghost,#toast{font-family:'Cormorant Garamond',Georgia,serif;letter-spacing:.12em;text-transform:uppercase;font-weight:600}
+.card:not(.magic):not(.jp){background:linear-gradient(180deg,#20232f 0%,#121a31 100%);border-color:rgba(201,162,74,.2);border-radius:28px;backdrop-filter:none;-webkit-backdrop-filter:none}
+.chapnav{display:flex;align-items:center;justify-content:center;gap:12px;margin:8px 0 2px}
+.cb{width:32px;height:32px;border-radius:50%;border:1px solid var(--line);background:transparent;color:var(--gold);font-size:16px;flex:none}
+.cb:disabled{opacity:.3}
+.chapnav span{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);text-align:center}
+.scale span{font-size:9px}
+</style>
+</head>
+<body>
+<div id="sky"></div>
+<div class="wrap">
+<header>
+  <svg class="moon" viewBox="0 0 100 100"><defs><radialGradient id="mg"><stop offset="0" stop-color="#fff6cf"/><stop offset="1" stop-color="#e8b94a"/></radialGradient><mask id="mm"><rect width="100" height="100" fill="#fff"/><circle cx="64" cy="40" r="31" fill="#000"/></mask></defs><circle cx="46" cy="52" r="35" fill="url(#mg)" mask="url(#mm)"/><path d="M78 18l2.4 6 6 2.4-6 2.4-2.4 6-2.4-6-6-2.4 6-2.4z" fill="#fff6cf"/></svg>
+  <div class="bis">بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</div>
+  <h1>My Path to His Love</h1>
+  <div class="quote" id="quote"></div>
+</header>
+<div class="nav">
+  <button id="prev" aria-label="Previous day">‹</button>
+  <div><b id="dateLbl"></b><small id="dayLbl"></small></div>
+  <button id="next" aria-label="Next day">›</button>
+</div>
+<div id="app"></div>
+<footer><button class="ghost" id="reset">Restart my journey from today</button></footer>
+</div>
+<div id="toast"></div>
+<script>
+var KEY='ibadah_dash_v1';
+var QUOTES=[
+ ['Duas are like arrows that never miss.',''],
+ ['When My servants ask about Me, I am near. I answer the call of the one who calls.','Quran 2:186'],
+ ['In the remembrance of Allah, hearts find rest.','Quran 13:28'],
+ ['The deeds most loved by Allah are the steady ones, even if small.','Prophetic teaching'],
+ ['Come to Him walking, and He comes to you running.','Prophetic teaching'],
+ ['Call upon Me, and I will respond to you.','Quran 40:60'],
+ ['If you are grateful, I will surely give you more.','Quran 14:7']
+];
+var TOASTS=['MashaAllah ✨','Allahu Akbar! Keep going','May Allah accept it 🤍','Another light added 🌙','He sees your effort ✨','Beautiful. Steady and sincere'];
+var GROUPS=[
+ {id:'fard',title:'The Five Daily Prayers',ar:'الصلوات الخمس',hint:'Check it off once you’ve prayed it in full.',items:[
+  ['fajr','Fajr','The day begins with Him.','🌅'],
+  ['dhuhr','Dhuhr','Pause. He is calling you.','☀️'],
+  ['asr','Asr','Guard it with care.','🌤️'],
+  ['maghrib','Maghrib','The day closes in gratitude.','🌇'],
+  ['isha','Isha','End the day in His presence.','🌙']]},
+ {id:'seven',title:'✦ The Magical Ten ✦',hint:'Extra love for the One who loves you most.',items:[
+  ['tahajjud','Tahajjud','In the last third of the night, He asks who is calling so He can answer.','🌌'],
+  ['ishraq','Salatul Ishraq','Pray as the sun rises: a fresh start in light.','🌄'],
+  ['duha','Salatul Duha','A charity for every part of your body.','🌞'],
+  ['tawba','Salatul Tawba','Return to Him. He loves those who turn back.','🕊️'],
+  ['shukr','Salatul Shukr','Gratitude brings more.','🤲'],
+  ['hajat','Salatul Hajat','Bring Him your need, big or small.','💫'],
+  ['istikhara','Salatul Istikhara','Ask the One who knows best to choose for you.','🧭'],
+  ['wudu','Tahiyatul Wudu','Two rakaʿat after wudu: the habit of Bilal, whose footsteps were heard in Jannah.','💧'],
+  ['tasbih','Salatul Tasbih','Rakaʿat filled with tasbih, glorifying Him in every position.','✨'],
+  ['awwabin','Salatul Awwabin','After Maghrib: the prayer of those who keep turning back to Him.','🌆']]},
+ {id:'extra',title:'Daily Treasures',ar:'الذكر والقرآن',hint:'',items:[
+  ['dhikr','5,000+ Dhikr','Hearts find rest in remembering Him.','📿'],
+  ['baqarah','Surah Al-Baqarah','Shaytan flees the home where it is recited.','📖'],
+  ['yaseen','Surah Yaseen','Recite it with presence and let it soften your heart.','💚'],
+  ['waqiah','Surah Al-Waqiah','Recite it each evening and remember the Day that is certain.','🌊'],
+  ['mulk','Surah Al-Mulk + As-Sajdah','A nightly habit of the Prophet ﷺ before he slept.','🌃']]}
+];
+var MS={7:'One week of light! Keep it glowing ✨',21:'Three weeks: a habit is being born 🌱',40:'Forty days of steadfastness 🌙',70:'Seventy days. The finish line is in sight!',100:'100 days complete. Alhamdulillah! 🤍'};
+var ALLIDS=[];GROUPS.forEach(function(g){g.items.forEach(function(i){ALLIDS.push(i[0]);});});
+var TOTAL=ALLIDS.length;
+var S={start:null,days:{}};
+try{var raw=localStorage.getItem(KEY);if(raw){S=JSON.parse(raw)||S;}}catch(e){}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(S));}catch(e){}}
+function ymd(d){return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');}
+function parse(s){var p=s.split('-');return new Date(+p[0],+p[1]-1,+p[2]);}
+function addDays(s,n){var d=parse(s);d.setDate(d.getDate()+n);return ymd(d);}
+function diff(a,b){return Math.round((parse(a)-parse(b))/864e5);}
+var today=ymd(new Date());
+if(!S.start||!S.days){S.start=today;S.days={};save();}
+var chap=0,lastView=null,view=today,qi=diff(today,'2026-01-01')%QUOTES.length;if(qi<0)qi=0;
+function day(ds){if(!S.days[ds])S.days[ds]={c:{}};if(!S.days[ds].c)S.days[ds].c={};return S.days[ds];}
+function count(ds){var d=S.days[ds];if(!d||!d.c)return 0;if(d.jp)return d.c.jackpot?1:0;var k=0;ALLIDS.forEach(function(id){if(d.c[id])k++;});return k;}
+function tot(ds){var d=S.days[ds];return d&&d.jp?1:TOTAL;}
+function isFull(ds){return count(ds)===tot(ds);}
+function colorFor(n){var t=(n-1)/(TOTAL-1);return 'hsl('+Math.round(215-170*t)+','+Math.round(60+20*t)+'%,'+Math.round(36+26*t)+'%)';}
+function streak(){var s=today,k=0;if(!isFull(s))s=addDays(s,-1);while(diff(s,S.start)>=0&&isFull(s)){k++;s=addDays(s,-1);}return k;}
+function showQuote(){var q=QUOTES[qi];document.getElementById('quote').innerHTML='“'+q[0]+'”'+(q[1]?'<small>'+q[1]+'</small>':'<small>Tap for another</small>');}
+function sky(){var s=document.getElementById('sky'),h='';for(var i=0;i<130;i++){var z=(Math.random()*1.6+.8).toFixed(1);h+='<div class="star" style="left:'+(Math.random()*100).toFixed(1)+'%;top:'+(Math.random()*100).toFixed(1)+'%;width:'+z+'px;height:'+z+'px;box-shadow:0 0 '+(z*2)+'px rgba(255,236,190,.35);opacity:'+(Math.random()*.7+.3).toFixed(2)+';--d:'+(Math.random()*4+2).toFixed(1)+'s;animation-delay:'+(Math.random()*4).toFixed(1)+'s"></div>';}s.innerHTML=h+'<i class="shoot" style="top:10%;left:75%"></i><i class="shoot" style="top:32%;left:98%;animation-delay:4.5s"></i>';}
+function burst(x,y,n){for(var i=0;i<n;i++){var e=document.createElement('span');e.className='sp';e.textContent=i%3?'✦':'✧';var a=Math.random()*6.28,r=40+Math.random()*80;e.style.left=x+'px';e.style.top=y+'px';e.style.setProperty('--dx',Math.cos(a)*r+'px');e.style.setProperty('--dy',(Math.sin(a)*r-20)+'px');document.body.appendChild(e);setTimeout(function(el){el.remove();}.bind(null,e),1000);}}
+var tt;function toast(m){var t=document.getElementById('toast');t.textContent=m;t.classList.add('show');clearTimeout(tt);tt=setTimeout(function(){t.classList.remove('show');},1800);}
+function render(){
+  var d=day(view),T=tot(view),jp=!!d.jp,done=count(view),pct=Math.round(done/T*100),h='';
+  var idx=diff(view,S.start)+1;
+  document.getElementById('dateLbl').textContent=parse(view).toLocaleDateString('en-US',{weekday:'long',month:'short',day:'numeric'})+(view===today?' · Today':'');
+  document.getElementById('dayLbl').textContent=idx>=1?'Day '+idx+' · Chapter '+(Math.floor((idx-1)/100)+1):'Before the challenge';
+  document.getElementById('next').disabled=view>=today;
+  var C=2*Math.PI*48,off=C*(1-done/T);
+  var hm=jp?(done?'Alhamdulillah! Your jackpot dhikr is done. Allah loves a tongue that remembers Him 🤍':'Jackpot day 💎 Just dhikr today, and every word is a treasure.'):done===TOTAL?'MashaAllah! Every light is lit today. May Allah accept it all 🤍':done===0?'Bismillah. Your sky is waiting to be filled with light ✨':pct>=70?'So close! Finish strong, He is pleased with your effort.':pct>=40?'You’re shining. Keep walking toward Him.':'Every prayer is a step closer to His love.';
+  h+='<div class="card hero"><div class="ring"><svg viewBox="0 0 120 120"><defs><linearGradient id="rg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="'+(jp?'#ff6b81':'#2fbf8f')+'"/><stop offset="1" stop-color="'+(jp?'#c4122f':'#fbe39a')+'"/></linearGradient></defs><circle cx="60" cy="60" r="48" fill="none" stroke="rgba(255,255,255,.12)" stroke-width="9"/><circle cx="60" cy="60" r="48" fill="none" stroke="url(#rg)" stroke-width="9" stroke-linecap="round" stroke-dasharray="'+C.toFixed(1)+'" stroke-dashoffset="'+off.toFixed(1)+'" style="transition:stroke-dashoffset .5s"/></svg><div class="mid"><div><b>'+pct+'%</b><small>'+done+' of '+T+'</small></div></div></div><div class="heromsg">'+hm+'</div></div>';
+  h+='<div class="jpbar"><button class="jpb'+(jp?' on':'')+'" data-jp="1">💎 Jackpot mode: '+(jp?'ON (dhikr only)':'OFF')+'</button></div>';
+  if(jp){h+='<div class="card jp"><h2>💎 Jackpot Day 💎</h2><span class="ar">ذِكْرُ ٱللَّٰهِ</span><p class="sub">Rest your body, let your tongue do the work.</p><div class="item'+(d.c.jackpot?' done':'')+'" data-id="jackpot"><div class="ic">📿</div><div class="t">10,000+ Dhikr<small>Every word is a treasure He keeps for you.</small></div><div class="box">'+(d.c.jackpot?'✓':'')+'</div></div></div>';}
+  else GROUPS.forEach(function(g){
+    var k=0;g.items.forEach(function(i){if(d.c[i[0]])k++;});
+    var magic=g.id==='seven';
+    h+='<div class="card'+(magic?' magic':'')+'"><h2>'+g.title+'</h2>'+(g.ar?'<span class="ar">'+g.ar+'</span>':'');
+    if(magic){
+      h+='<div class="stars">';g.items.forEach(function(i){h+='<span'+(d.c[i[0]]?' class="on"':'')+'>★</span>';});h+='</div>';
+      h+='<div class="arrow"><span class="flight">➳</span><p>🏹 Duas are like arrows that never miss.</p><small>Tahajjud is when you draw the bow.</small></div>';
+    }
+    if(g.hint)h+='<p class="sub">'+g.hint+'</p>';else h+='<div class="orn">✦ ✦ ✦</div>';
+    g.items.forEach(function(i){
+      var on=d.c[i[0]];
+      h+='<div class="item'+(on?' done':'')+'" data-id="'+i[0]+'"><div class="ic">'+i[3]+'</div><div class="t">'+i[1]+'<small>'+i[2]+'</small></div><div class="box">'+(on?'✓':'')+'</div></div>';
+    });
+    h+='</div>';
+  });
+  if(view!==lastView){chap=Math.max(0,Math.floor(diff(view,S.start)/100));lastView=view;}
+  var base=chap*100,full=0,all=0,curIdx=diff(today,S.start)+1,curChap=Math.max(0,Math.floor((curIdx-1)/100));
+  for(var i=0;i<100;i++){var q0=addDays(S.start,base+i);if(q0<=today&&isFull(q0))full++;}
+  for(var a=0;a<curIdx;a++){if(isFull(addDays(S.start,a)))all++;}
+  var cur=Math.min(100,Math.max(0,curIdx-base)),last=0,next=100;
+  Object.keys(MS).forEach(function(m){m=+m;if(m<=cur)last=m;});
+  Object.keys(MS).forEach(function(m){m=+m;if(m>cur&&m<next)next=m;});if(cur>=100)next=0;
+  h+='<div class="card"><h2>🌙 Chapter '+(chap+1)+'</h2><span class="ar">مئة يوم من النور</span>';
+  h+='<div class="chapnav"><button class="cb" data-chap="-1"'+(chap<=0?' disabled':'')+'>‹</button><span>Days '+(base+1)+' to '+(base+100)+(chap===0?' · The 100 Days Challenge':' · A lifelong journey')+'</span><button class="cb" data-chap="1"'+(chap>=curChap?' disabled':'')+'>›</button></div>';
+  h+='<div class="stats"><div class="stat"><b>'+full+'</b><small>This chapter</small></div><div class="stat"><b>'+streak()+'</b><small>Day streak 🔥</small></div><div class="stat"><b>'+all+'</b><small>Lifetime days</small></div></div>';
+  h+='<div class="bar"><i style="width:'+full+'%"></i></div><div class="grid">';
+  for(var j=0;j<100;j++){
+    var ds=addDays(S.start,base+j),cls='c',n=count(ds);
+    if(ds>today)cls+=' fut';else if(S.days[ds]&&S.days[ds].jp)cls+=(n?' jpfull':' jppart');else if(n===TOTAL)cls+=' full';else if(n>0)cls+=' part';
+    var st=(ds<=today&&n>0&&n<TOTAL&&!(S.days[ds]&&S.days[ds].jp))?' style="background:'+colorFor(n)+';color:'+(n>=8?'#1d1400':'#fff')+'"':'';
+    if(MS[j+1])cls+=' ms';
+    if(ds===today)cls+=' today';if(ds===view)cls+=' sel';
+    h+='<button class="'+cls+'"'+st+' data-day="'+ds+'">'+(base+j+1)+'</button>';
+  }
+  h+='</div><div class="scale">';for(var q=1;q<=TOTAL;q++){h+='<span style="background:'+(q===TOTAL?'var(--gold)':colorFor(q))+';color:'+(q>=8?'#1d1400':'#fff')+'">'+q+'</span>';}h+='</div><div class="legend"><span>Each color = deeds done that day (1 to '+TOTAL+')</span><span><i style="background:#e0334f"></i>Jackpot day</span><span><i style="border:1.5px dashed var(--gold)"></i>Milestone</span></div>';
+  h+='<p class="msn">'+(chap<curChap?'Chapter '+(chap+1)+' complete. Alhamdulillah! 🤍':cur>=100?'Chapter '+(chap+1)+' complete! Chapter '+(chap+2)+' opens tomorrow, inshaAllah ✨':(last?MS[last]:(chap?'Chapter '+(chap+1)+' begins. Keep going, bismillah.':'Day 1 is a new beginning. Bismillah.')))+(next?'<br><small style="font-size:14px;color:var(--mute)">Next milestone: day '+next+' ('+(next-cur)+' days away)</small>':'')+'</p>';
+  h+='<p class="sub" style="margin-top:8px">A day glows gold when all '+TOTAL+' deeds are done, and red on a jackpot day when your 10,000+ dhikr is done. Tap a past day to catch up.</p></div>';
+  document.getElementById('app').innerHTML=h;
+}
+document.getElementById('app').addEventListener('click',function(e){
+  var t=e.target.closest('[data-id],[data-day],[data-jp],[data-chap]');if(!t)return;
+  var d=day(view);
+  if(t.dataset.id){
+    var id=t.dataset.id;d.c[id]=!d.c[id];save();
+    if(d.c[id]){
+      burst(e.clientX,e.clientY,12);
+      if(count(view)===tot(view)){setTimeout(function(){burst(innerWidth/2,innerHeight/3,40);},250);toast('Every light is lit! Alhamdulillah 🤍');}
+      else toast(TOASTS[Math.floor(Math.random()*TOASTS.length)]);
+    }
+  }else if(t.dataset.chap){chap=Math.max(0,chap+(+t.dataset.chap));}else if(t.dataset.jp){d.jp=!d.jp;save();}else if(t.dataset.day){if(t.dataset.day<=today)view=t.dataset.day;}
+  render();
+});
+document.getElementById('quote').onclick=function(){qi=(qi+1)%QUOTES.length;showQuote();};
+document.getElementById('prev').onclick=function(){view=addDays(view,-1);render();};
+document.getElementById('next').onclick=function(){if(view<today){view=addDays(view,1);render();}};
+document.getElementById('reset').onclick=function(){
+  if(this.dataset.sure){S={start:today,days:{}};view=today;save();this.dataset.sure='';this.textContent='Restart my journey from today';render();}
+  else{this.dataset.sure='1';this.textContent='Tap again to confirm (erases all progress)';}
+};
+sky();showQuote();render();
+</script>
+</body>
+</html>
